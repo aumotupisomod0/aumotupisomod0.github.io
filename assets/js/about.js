@@ -1,11 +1,8 @@
-// 主应用逻辑
-class QuotesApp {
+// About页面的简化逻辑
+class AboutApp {
   constructor() {
     this.currentLang = 'en';
     this.translations = {};
-    this.quotesData = {};
-    this.quoteListEl = null;
-    this.searchInputEl = null;
     this.langSelectEl = null;
     
     this.init();
@@ -13,15 +10,8 @@ class QuotesApp {
 
   async init() {
     await this.loadTranslations();
-    await this.loadQuotesData();
     await this.loadCommonComponents();
     this.setupEventListeners();
-    
-    // 只在首页显示引用
-    if (this.quoteListEl) {
-      this.displayQuotes(this.quotesData[this.currentLang]);
-    }
-    
     this.updateTexts();
   }
 
@@ -31,19 +21,6 @@ class QuotesApp {
       this.translations = await response.json();
     } catch (error) {
       console.error('Error loading translations:', error);
-    }
-  }
-
-  async loadQuotesData() {
-    try {
-      // 由于quotes-data.js已经定义了quotesData变量，我们直接使用它
-      if (typeof quotesData !== 'undefined') {
-        this.quotesData = quotesData;
-      } else {
-        console.error('Quotes data not loaded');
-      }
-    } catch (error) {
-      console.error('Error loading quotes data:', error);
     }
   }
 
@@ -66,8 +43,6 @@ class QuotesApp {
       }
 
       // 重新获取元素引用
-      this.quoteListEl = document.getElementById('quoteList');
-      this.searchInputEl = document.getElementById('searchInput');
       this.langSelectEl = document.getElementById('langSelect');
     } catch (error) {
       console.error('Error loading common components:', error);
@@ -75,57 +50,12 @@ class QuotesApp {
   }
 
   setupEventListeners() {
-    if (this.searchInputEl) {
-      this.searchInputEl.addEventListener('input', () => this.filterQuotes());
-    }
-
     if (this.langSelectEl) {
       this.langSelectEl.addEventListener('change', (e) => {
         this.currentLang = e.target.value;
-        if (this.quoteListEl && this.searchInputEl) {
-          this.filterQuotes();
-          this.searchInputEl.value = '';
-        }
         this.updateTexts();
       });
     }
-  }
-
-  displayQuotes(list) {
-    if (!this.quoteListEl) return;
-    
-    this.quoteListEl.innerHTML = '';
-    if (list.length === 0) {
-      const noQuotesText = this.getTranslation('no_quotes_found');
-      this.quoteListEl.innerHTML = `<li>${noQuotesText}</li>`;
-      return;
-    }
-    
-    for (const q of list) {
-      const li = document.createElement('li');
-      li.textContent = q.text;
-      const authorDiv = document.createElement('div');
-      authorDiv.className = 'author';
-      authorDiv.textContent = q.author;
-      li.appendChild(authorDiv);
-      this.quoteListEl.appendChild(li);
-    }
-  }
-
-  filterQuotes() {
-    if (!this.searchInputEl || !this.quoteListEl) return;
-    
-    const keyword = this.searchInputEl.value.trim().toLowerCase();
-    if (!keyword) {
-      this.displayQuotes(this.quotesData[this.currentLang]);
-      return;
-    }
-    
-    const filtered = this.quotesData[this.currentLang].filter(q =>
-      q.text.toLowerCase().includes(keyword) || 
-      q.author.toLowerCase().includes(keyword)
-    );
-    this.displayQuotes(filtered);
   }
 
   getTranslation(key) {
@@ -160,5 +90,5 @@ class QuotesApp {
 
 // 当DOM加载完成后初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-  new QuotesApp();
+  new AboutApp();
 });
