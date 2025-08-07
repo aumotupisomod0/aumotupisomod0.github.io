@@ -1,0 +1,41 @@
+{
+  "en": {
+    "nav_home": "Home",
+    "nav_about": "About",
+    "nav_language_label": "Select language",
+    "welcome_title": "Welcome to Famous Quotes",
+    "search_placeholder": "Search quotes or authors...",
+    "about_title": "About This Website",
+    "about_p1": "This site collects inspiring quotes from famous people to motivate and encourage visitors.",
+    "about_p2": "It is hosted on GitHub Pages and designed to be clean and simple.",
+    "about_p3": "Created by you :)",
+    "footer_copyright": "© 2025 aumotupisomod0. All rights reserved.",
+    "no_quotes_found": "No quotes found."
+  },
+  "zh": {
+    "nav_home": "首页",
+    "nav_about": "关于",
+    "nav_language_label": "选择语言",
+    "welcome_title": "欢迎来到名人名言",
+    "search_placeholder": "搜索名言或作者...",
+    "about_title": "关于本站",
+    "about_p1": "本站收集了许多名人名言，旨在激励和鼓励访客。",
+    "about_p2": "托管于 GitHub Pages，设计简洁美观。",
+    "about_p3": "由你创建 :)",
+    "footer_copyright": "© 2025 aumotupisomod0. 保留所有权利。",
+    "no_quotes_found": "未找到相关名言。"
+  },
+  "es": {
+    "nav_home": "Inicio",
+    "nav_about": "Acerca de",
+    "nav_language_label": "Seleccionar idioma",
+    "welcome_title": "Bienvenido a Citas Famosas",
+    "search_placeholder": "Buscar citas o autores...",
+    "about_title": "Acerca de este sitio",
+    "about_p1": "Este sitio recopila citas inspiradoras de personas famosas para motivar y alentar a los visitantes.",
+    "about_p2": "Está alojado en GitHub Pages y diseñado para ser limpio y sencillo.",
+    "about_p3": "Creado por ti :)",
+    "footer_copyright": "© 2025 aumotupisomod0. Todos los derechos reservados.",
+    "no_quotes_found": "No se encontraron citas."
+  }
+}
