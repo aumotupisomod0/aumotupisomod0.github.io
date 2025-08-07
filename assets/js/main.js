@@ -55,6 +55,15 @@ class QuotesApp {
       const headerContainer = document.querySelector('.header-container');
       if (headerContainer) {
         headerContainer.innerHTML = headerHtml;
+        
+        // 修正导航链接的路径（确保指向正确的路径）
+        const homeLink = headerContainer.querySelector('a[data-i18n="nav.home"]');
+        const aboutLink = headerContainer.querySelector('a[data-i18n="nav.about"]');
+        const sponsorsLink = headerContainer.querySelector('a[data-i18n="nav.sponsors"]');
+        
+        if (homeLink) homeLink.href = 'index.html';
+        if (aboutLink) aboutLink.href = 'about.html';
+        if (sponsorsLink) sponsorsLink.href = 'sponsors/index.html';
       }
 
       // 加载页脚
@@ -129,9 +138,18 @@ class QuotesApp {
   }
 
   getTranslation(key) {
-    return this.translations[this.currentLang] && this.translations[this.currentLang][key] 
-      ? this.translations[this.currentLang][key] 
-      : key;
+    const keys = key.split('.');
+    let value = this.translations[this.currentLang];
+    
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        return key; // 返回原始key如果翻译不存在
+      }
+    }
+    
+    return typeof value === 'string' ? value : key;
   }
 
   updateTexts() {

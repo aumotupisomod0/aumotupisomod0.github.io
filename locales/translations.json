@@ -1,41 +1,101 @@
 {
   "en": {
-    "nav_home": "Home",
-    "nav_about": "About",
-    "nav_language_label": "Select language",
-    "welcome_title": "Welcome to Famous Quotes",
-    "search_placeholder": "Search quotes or authors...",
-    "about_title": "About This Website",
-    "about_p1": "This site collects inspiring quotes from famous people to motivate and encourage visitors.",
-    "about_p2": "It is hosted on GitHub Pages and designed to be clean and simple.",
-    "about_p3": "Created by you :)",
-    "footer_copyright": "© 2025 aumotupisomod0. All rights reserved.",
-    "no_quotes_found": "No quotes found."
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "sponsors": "Sponsors",
+      "language_label": "Select language"
+    },
+    "home": {
+      "welcome_title": "Welcome to Famous Quotes",
+      "search_placeholder": "Search quotes or authors...",
+      "no_quotes_found": "No quotes found."
+    },
+    "about": {
+      "title": "About This Website",
+      "p1": "This site collects inspiring quotes from famous people to motivate and encourage visitors.",
+      "p2": "It is hosted on GitHub Pages and designed to be clean and simple.",
+      "p3": "Created by you :)"
+    },
+    "sponsors": {
+      "title": "Our Sponsors",
+      "intro": "We are grateful to our sponsors who help keep this website running and free for everyone.",
+      "visit_btn": "Visit Sponsor",
+      "coming_soon": "Coming Soon",
+      "coming_soon_desc": "Professional advertising solutions for modern websites. Coming soon...",
+      "popcash": {
+        "title": "PopCash - Premium Advertising Network",
+        "desc": "PopCash is a leading advertising network that helps websites monetize their traffic while providing relevant ads to users."
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 aumotupisomod0. All rights reserved."
+    }
   },
   "zh": {
-    "nav_home": "首页",
-    "nav_about": "关于",
-    "nav_language_label": "选择语言",
-    "welcome_title": "欢迎来到名人名言",
-    "search_placeholder": "搜索名言或作者...",
-    "about_title": "关于本站",
-    "about_p1": "本站收集了许多名人名言，旨在激励和鼓励访客。",
-    "about_p2": "托管于 GitHub Pages，设计简洁美观。",
-    "about_p3": "由你创建 :)",
-    "footer_copyright": "© 2025 aumotupisomod0. 保留所有权利。",
-    "no_quotes_found": "未找到相关名言。"
+    "nav": {
+      "home": "首页",
+      "about": "关于",
+      "sponsors": "赞助商",
+      "language_label": "选择语言"
+    },
+    "home": {
+      "welcome_title": "欢迎来到名人名言",
+      "search_placeholder": "搜索名言或作者...",
+      "no_quotes_found": "未找到相关名言。"
+    },
+    "about": {
+      "title": "关于本站",
+      "p1": "本站收集了许多名人名言，旨在激励和鼓励访客。",
+      "p2": "托管于 GitHub Pages，设计简洁美观。",
+      "p3": "由你创建 :)"
+    },
+    "sponsors": {
+      "title": "我们的赞助商",
+      "intro": "我们感谢帮助维持网站运行并让所有人免费使用的赞助商。",
+      "visit_btn": "访问赞助商",
+      "coming_soon": "即将推出",
+      "coming_soon_desc": "面向现代网站的专业广告解决方案。即将推出...",
+      "popcash": {
+        "title": "PopCash - 优质广告网络",
+        "desc": "PopCash 是领先的广告网络，帮助网站将流量变现，同时为用户提供相关广告。"
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 aumotupisomod0. 保留所有权利。"
+    }
   },
   "es": {
-    "nav_home": "Inicio",
-    "nav_about": "Acerca de",
-    "nav_language_label": "Seleccionar idioma",
-    "welcome_title": "Bienvenido a Citas Famosas",
-    "search_placeholder": "Buscar citas o autores...",
-    "about_title": "Acerca de este sitio",
-    "about_p1": "Este sitio recopila citas inspiradoras de personas famosas para motivar y alentar a los visitantes.",
-    "about_p2": "Está alojado en GitHub Pages y diseñado para ser limpio y sencillo.",
-    "about_p3": "Creado por ti :)",
-    "footer_copyright": "© 2025 aumotupisomod0. Todos los derechos reservados.",
-    "no_quotes_found": "No se encontraron citas."
+    "nav": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "sponsors": "Patrocinadores",
+      "language_label": "Seleccionar idioma"
+    },
+    "home": {
+      "welcome_title": "Bienvenido a Citas Famosas",
+      "search_placeholder": "Buscar citas o autores...",
+      "no_quotes_found": "No se encontraron citas."
+    },
+    "about": {
+      "title": "Acerca de este sitio",
+      "p1": "Este sitio recopila citas inspiradoras de personas famosas para motivar y alentar a los visitantes.",
+      "p2": "Está alojado en GitHub Pages y diseñado para ser limpio y sencillo.",
+      "p3": "Creado por ti :)"
+    },
+    "sponsors": {
+      "title": "Nuestros Patrocinadores",
+      "intro": "Agradecemos a nuestros patrocinadores que ayudan a mantener este sitio web funcionando y gratuito para todos.",
+      "visit_btn": "Visitar Patrocinador",
+      "coming_soon": "Próximamente",
+      "coming_soon_desc": "Soluciones publicitarias profesionales para sitios web modernos. Próximamente...",
+      "popcash": {
+        "title": "PopCash - Red de Publicidad Premium",
+        "desc": "PopCash es una red publicitaria líder que ayuda a los sitios web a monetizar su tráfico mientras proporciona anuncios relevantes a los usuarios."
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 aumotupisomod0. Todos los derechos reservados."
+    }
   }
 }

@@ -1,5 +1,5 @@
-// About页面的简化逻辑
-class AboutApp {
+// Sponsors页面的逻辑
+class SponsorsApp {
   constructor() {
     this.currentLang = 'en';
     this.translations = {};
@@ -17,7 +17,7 @@ class AboutApp {
 
   async loadTranslations() {
     try {
-      const response = await fetch('./locales/translations.json');
+      const response = await fetch('../locales/translations.json');
       this.translations = await response.json();
     } catch (error) {
       console.error('Error loading translations:', error);
@@ -27,24 +27,24 @@ class AboutApp {
   async loadCommonComponents() {
     try {
       // 加载头部
-      const headerResponse = await fetch('./common/header.html');
+      const headerResponse = await fetch('../common/header.html');
       const headerHtml = await headerResponse.text();
       const headerContainer = document.querySelector('.header-container');
       if (headerContainer) {
         headerContainer.innerHTML = headerHtml;
         
-        // 修正导航链接的路径（确保指向正确的路径）
+        // 修正导航链接的路径（因为我们在sponsors子目录中）
         const homeLink = headerContainer.querySelector('a[data-i18n="nav.home"]');
         const aboutLink = headerContainer.querySelector('a[data-i18n="nav.about"]');
         const sponsorsLink = headerContainer.querySelector('a[data-i18n="nav.sponsors"]');
         
-        if (homeLink) homeLink.href = 'index.html';
-        if (aboutLink) aboutLink.href = 'about.html';
-        if (sponsorsLink) sponsorsLink.href = 'sponsors/index.html';
+        if (homeLink) homeLink.href = '../index.html';
+        if (aboutLink) aboutLink.href = '../about.html';
+        if (sponsorsLink) sponsorsLink.href = 'index.html';
       }
 
       // 加载页脚
-      const footerResponse = await fetch('./common/footer.html');
+      const footerResponse = await fetch('../common/footer.html');
       const footerHtml = await footerResponse.text();
       const footerContainer = document.querySelector('.footer-container');
       if (footerContainer) {
@@ -108,5 +108,5 @@ class AboutApp {
 
 // 当DOM加载完成后初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-  new AboutApp();
+  new SponsorsApp();
 });
